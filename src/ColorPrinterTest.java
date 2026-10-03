@@ -27,6 +27,8 @@ class ColorPrinterTest {
     assertEquals(expectedOutput, outputStream.toString());
   }
 
+
+  // Prints all lines in blue with no reset towards color.
   @Test
   void testPrintlnWithBlueNoReset() {
     //Arrange
@@ -48,6 +50,7 @@ class ColorPrinterTest {
     assertEquals(expectedOutput, outputStream.toString());
   }
 
+  // Prints first in blue, resets the color in a new line, then prints in red.
     @Test
   void testPrintWithBlueResetThenRed() {
     //Arrange
