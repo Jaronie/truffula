@@ -1,3 +1,5 @@
+
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,4 +28,21 @@ public class TruffulaOptionsTest {
     assertTrue(options.isShowHidden());
     assertFalse(options.isUseColor());
   }
+
+  @Test
+  void testInvalidFile(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File file = new File("test.txt");
+    String[] args = {"-nc", "-h", file.toString()};
+
+    //Act: Create instance
+    Exception e = assertThrows(FileNotFoundException.class, () -> {
+      TruffulaOptions options = new TruffulaOptions(args);
+    });
+
+    // Assert:
+
+    assertEquals("Path at test.txt can not be found or does not exist.", e.getMessage());
+}
+
 }
