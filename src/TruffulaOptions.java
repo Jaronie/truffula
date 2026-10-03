@@ -128,6 +128,9 @@ public class TruffulaOptions  {
 
       throw new FileNotFoundException("Path at " + temp + " can not be found or does not exist.");
     }
+    if(!temp.isDirectory()){
+      throw new FileNotFoundException("Path at " + temp + " can not be found or does not exist.");
+    }
 
 
     root = temp;
