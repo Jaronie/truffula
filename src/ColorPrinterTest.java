@@ -33,8 +33,8 @@ class ColorPrinterTest {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outputStream);
 
-    ColorPrinter printer = new ColorPrinter(printStream);
-    printer.setCurrentColor(ConsoleColor.BLUE);
+    ColorPrinter printer = new ColorPrinter(printStream, ConsoleColor.BLUE);
+
 
     //Act
       String message = "Woah, I'm blue.";
@@ -42,9 +42,46 @@ class ColorPrinterTest {
       String message2 = "I'm.. still blue!";
       printer.print(message2);
 
-      String expectedOutput = ConsoleColor.BLUE + message + System.lineSeparator() + message2 + ConsoleColor.RESET;
+      String expectedOutput = ConsoleColor.BLUE + message + System.lineSeparator() + ConsoleColor.BLUE + message2 + ConsoleColor.RESET;
 
     //Assert
     assertEquals(expectedOutput, outputStream.toString());
   }
+
+    @Test
+  void testPrintWithBlueResetThenRed() {
+    //Arrange
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    PrintStream printStream = new PrintStream(outputStream);
+
+    ColorPrinter printer = new ColorPrinter(printStream, ConsoleColor.BLUE);
+
+
+    //Act
+      String message = "Woah, I'm blue.";
+      printer.println(message, true);
+      printer.setCurrentColor(ConsoleColor.RESET);
+      String message2 = "I'm.. no longer blue.";
+      printer.println(message2,true);
+      printer.setCurrentColor(ConsoleColor.RED);
+      String message3 = "It's okay. Now I'm red!";
+
+
+
+      printer.print(message3);
+
+
+      String expectedOutput = ConsoleColor.BLUE +
+      message + 
+      System.lineSeparator() + ConsoleColor.RESET + 
+      ConsoleColor.RESET + message2 + 
+      System.lineSeparator() + ConsoleColor.RESET +
+      ConsoleColor.RED + message3 + ConsoleColor.RESET;
+
+
+    //Assert
+    assertEquals(expectedOutput, outputStream.toString());
+  }
+
+
 }
