@@ -26,6 +26,10 @@ With the use of ANSI escape codes stored in enum variables, these codes represen
 
 ## ColorPrinter.java / ColorPrinterTest.java
 
+ColorPrinter.java / Has functionality to get colors from ConsoleColor and set them to the current stream of output. Every newline resets the color to default unless set otherwise with the use of the "reset" boolean.
+
+ColorPrinterTest.java / Tests the functionality of ColorPrinter.java using JUnit framework. 
+
 ## TruffulaOptions.java / TruffulaOptionsTest.java
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
