@@ -5,7 +5,18 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 
 ## App.java
 
-This file is what runs a Java application that prints a directory tree. Which is basically just a folder or file and the potential files/folders inside of it. The root directory is referred to as what part of the directory the path begins at. "home/x/y" for example, "home" is the root directory - x & y are the descendant files.
+This file runs a Java application that prints a directory tree. The root directory is referred to as what part of the directory the path begins at. <strong>"home/x/y"</strong> for example, "home" is the root directory - x & y are the descendant files.
+
+<br>
+The behavior of the application contains options for creating a directory tree. Such as:
+<br>
+<ul> 
+<li> The option to show hidden files
+<li> The option to use colored output.
+<li> The root directory. (Where the path begins.)
+</ul>
+
+
 
 
 ## ConsoleColor.java
