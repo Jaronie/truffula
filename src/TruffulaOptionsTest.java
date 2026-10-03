@@ -37,10 +37,11 @@ public class TruffulaOptionsTest {
 
     //Act: Create instance
     Exception e = assertThrows(FileNotFoundException.class, () -> {
+      @SuppressWarnings("unused")
       TruffulaOptions options = new TruffulaOptions(args);
     });
 
-    // Assert:
+    // Assert: If exception message matches expected String output.
 
     assertEquals("Path at test.txt can not be found or does not exist.", e.getMessage());
 }
