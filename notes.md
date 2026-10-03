@@ -16,10 +16,13 @@ The behavior of the application contains options for creating a directory tree. 
 <li> The root directory. (Where the path begins.)
 </ul>
 
-
-
-
 ## ConsoleColor.java
+
+This file contains color variables to be used for console output.
+
+With the use of ANSI escape codes stored in enum variables, these codes represent colors.
+
+
 
 ## ColorPrinter.java / ColorPrinterTest.java
 
