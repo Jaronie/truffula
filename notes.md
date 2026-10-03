@@ -39,5 +39,9 @@ TruffulaOptions.java / contains functionality for how a directory tree is printe
 TruffulaOptionsTest.java runs JUnit Tests for TruffulaOptions.java by ensuring that the use of it is correctly set.
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
+TruffulaPrinter.java / Prints a directory tree with desired options such as colored output and/or showing hidden files.
+
+TruffulaPrinterTest.java / Builds an example directory and checks for the OS. Tests TruffulaPrinter.java's functionality to compare its output of the example directory.
+
 
 ## AlphabeticalFileSorter.java
