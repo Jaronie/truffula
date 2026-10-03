@@ -31,6 +31,12 @@ ColorPrinter.java / Has functionality to get colors from ConsoleColor and set th
 ColorPrinterTest.java / Tests the functionality of ColorPrinter.java using JUnit framework. 
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
+TruffulaOptions.java / contains functionality for how a directory tree is printed in the terminal. The options correspond to the options in App.java, and with use of basic flags like -
+   * Supported Flags:
+   * - -h   : Show hidden files (defaults to false).
+   * - -nc  : Do not use color (uses color by default).
+
+TruffulaOptionsTest.java runs JUnit Tests for TruffulaOptions.java by ensuring that the use of it is correctly set.
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
 
