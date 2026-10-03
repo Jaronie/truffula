@@ -45,3 +45,5 @@ TruffulaPrinterTest.java / Builds an example directory and checks for the OS. Te
 
 
 ## AlphabeticalFileSorter.java
+
+This file functions to sort files in the supposed directory, making things organized!
